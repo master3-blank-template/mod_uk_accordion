@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field name="title" type="text" label="MOD_UK_ACCORDION_FORM_TITLE" class="input-xxlarge" />
+    <field name="content" type="editor" label="MOD_UK_ACCORDION_FORM_CONTENT" filter="raw" />
+    <field name="title_class" type="text" label="MOD_UK_ACCORDION_FORM_TITLE_CLASS" />
+    <field name="content_class" type="text" label="MOD_UK_ACCORDION_FORM_CONTENT_CLASS" />
+</form>
