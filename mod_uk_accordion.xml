@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<extension type="module" version="3.3" method="upgrade" client="site">
-    <name>MOD_UK_ACCORDION</name>
+<extension type="module" version="3.6" method="upgrade" client="site">
+    <name>UIkit 3 Accordion</name>
 	<author>Aleksey A. Morozov (AlekVolsk)</author>
 	<copyright>(C) 2018 Aleksey A. Morozov. All rights reserved.</copyright>
 	<license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<creationDate>May 2018</creationDate>
     <description><![CDATA[MOD_UK_ACCORDION_XML_DESCRIPTION]]></description>
     <files>
@@ -12,50 +12,56 @@
         <folder>forms</folder>
         <folder>tmpl</folder>
     </files>
-    <languages>
-        <language tag="ru-RU">ru-RU.mod_uk_accordion.ini</language>
-        <language tag="ru-RU">ru-RU.mod_uk_accordion.sys.ini</language>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.mod_uk_accordion.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_uk_accordion.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_uk_accordion.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_uk_accordion.sys.ini</language>
     </languages>
-        <config>
-            <fields name="params">
-                <fieldset name="basic">
-                    <field name="title_class" type="text" label="MOD_UK_ACCORDION_TITLE_CLASS" default="" class="input-xlarge" />
-                    <field name="content_class" type="text" label="MOD_UK_ACCORDION_CONTENT_CLASS" default="" class="input-xlarge" />
-                    <field name="active" type="text" label="MOD_UK_ACCORDION_ACTIVE" description="MOD_UK_ACCORDION_ACTIVE_DESC" default="" class="input-small" />
-                    <field name="multiple" type="radio" label="MOD_UK_ACCORDION_MULTIPLE" default="0" class="btn-group">
-                        <option value="1">JYES</option>
-                        <option value="0">JNO</option>
-                    </field>
-                    <field name="collapsible" type="radio" label="MOD_UK_ACCORDION_COLLAPSIBLE" description="MOD_UK_ACCORDION_COLLAPSIBLE_DESC" default="1" class="btn-group">
-                        <option value="1">JYES</option>
-                        <option value="0">JNO</option>
-                    </field>
-                    <field name="animation" type="radio" label="MOD_UK_ACCORDION_ANIMATION" default="1" class="btn-group">
-                        <option value="1">JYES</option>
-                        <option value="0">JNO</option>
-                    </field>
-                    <field name="duration" type="text" label="MOD_UK_ACCORDION_DURATION" default="200" class="input-small" />
-                    <field name="transition" type="list" label="MOD_UK_ACCORDION_TRANSITION" default="ease">
-                        <option value="linear">linear</option>
-                        <option value="ease">ease</option>
-                        <option value="ease-in">ease-in</option>
-                        <option value="ease-in-out">ease-in-out</option>
-                        <option value="ease-out">ease-out</option>
-                        <option value="step-start">step-start</option>
-                        <option value="step-end">step-end</option>
-                    </field>
-                </fieldset>
-                <fieldset name="els">
-                    <field name="items" type="subform" label="COM_MODULES_ELS_FIELDSET_LABEL" formsource="/modules/mod_uk_accordion/forms/form.xml" multiple="true" min="0" layout="joomla.form.field.subform.repeatable" />
-                </fieldset>
-                <fieldset name="advanced">
-                    <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
-                    <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
-                    <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">
-                        <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-                        <option value="1">JGLOBAL_USE_GLOBAL</option>
-                    </field>
-                </fieldset>
-            </fields>
-        </config>
+    <config>
+        <fields name="params">
+            
+            <fieldset name="basic">
+                <field name="accordeon_class" type="text" label="MOD_UK_ACCORDION_CLASS" class="input-xlarge" />
+                <field name="title_class" type="text" label="MOD_UK_ACCORDION_TITLE_CLASS" class="input-xlarge" />
+                <field name="content_class" type="text" label="MOD_UK_ACCORDION_CONTENT_CLASS" class="input-xlarge" />
+                <field name="active" type="text" label="MOD_UK_ACCORDION_ACTIVE" description="MOD_UK_ACCORDION_ACTIVE_DESC" class="input-small" />
+                <field name="multiple" type="radio" label="MOD_UK_ACCORDION_MULTIPLE" default="0" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="collapsible" type="radio" label="MOD_UK_ACCORDION_COLLAPSIBLE" description="MOD_UK_ACCORDION_COLLAPSIBLE_DESC" default="1" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="animation" type="radio" label="MOD_UK_ACCORDION_ANIMATION" default="1" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="duration" type="text" label="MOD_UK_ACCORDION_DURATION" default="200" class="input-small" />
+                <field name="transition" type="list" label="MOD_UK_ACCORDION_TRANSITION" default="ease">
+                    <option value="linear">linear</option>
+                    <option value="ease">ease</option>
+                    <option value="ease-in">ease-in</option>
+                    <option value="ease-in-out">ease-in-out</option>
+                    <option value="ease-out">ease-out</option>
+                    <option value="step-start">step-start</option>
+                    <option value="step-end">step-end</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="els">
+                <field name="items" type="subform" label="COM_MODULES_ELS_FIELDSET_LABEL" formsource="/modules/mod_uk_accordion/forms/form.xml" multiple="true" min="0" layout="joomla.form.field.subform.repeatable" />
+            </fieldset>
+            
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
 </extension>

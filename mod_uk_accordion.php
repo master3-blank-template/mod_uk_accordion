@@ -1,13 +1,24 @@
 <?php defined('_JEXEC') or die;
+/*
+ * @package     mod_uk_accordion
+ * @copyright   Copyright (C) 2018 Aleksey A. Morozov (AlekVolsk). All rights reserved.
+ * @license     GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt
+ */
 
 $vars = [
-    'moduleclass_sfx', 
-    'title_class', 'content_class',
+    'accordeon_class', 'title_class', 'content_class',
     'active', 'multiple', 'collapsible', 'animation', 'duration', 'transition',
     'items'
 ];
+
 foreach ($vars as $var)
+{
     $$var = $params->get($var);
+}
+
+$accordeon_class = trim($accordeon_class) ? ' ' . trim($accordeon_class) : '';
+$title_class = trim($title_class) ? ' ' . trim($title_class) : '';
+$content_class = trim($content_class) ? ' ' . trim($content_class) : '';
 
 $accordion_params = [];
 if ((int)$active > 0) $accordion_params[] = 'active:' . $active;
