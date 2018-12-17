@@ -1,7 +1,5 @@
 # UIkit 3 Accordion
 
-![Github Releases](https://img.shields.io/github/downloads/AlekVolsk/mod_uk_accordion/latest/total.svg)
-
 ### EN:
 
 Accordion of content, based on the UIkit 3 framework. Module for Joomla! 3
