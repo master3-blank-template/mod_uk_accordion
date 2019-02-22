@@ -1,9 +1,11 @@
 <?php defined('_JEXEC') or die;
 /*
  * @package     mod_uk_accordion
- * @copyright   Copyright (C) 2018 Aleksey A. Morozov (AlekVolsk). All rights reserved.
+ * @copyright   Copyright (C) 2019 Aleksey A. Morozov (AlekVolsk). All rights reserved.
  * @license     GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt
  */
+
+use Joomla\CMS\Helper\ModuleHelper;
 
 $vars = [
     'accordeon_class', 'title_class', 'content_class',
@@ -11,8 +13,7 @@ $vars = [
     'items'
 ];
 
-foreach ($vars as $var)
-{
+foreach ($vars as $var) {
     $$var = $params->get($var);
 }
 
@@ -24,8 +25,7 @@ $accordion_params = [];
 if ((int)$active > 0) $accordion_params[] = 'active:' . $active;
 if ($multiple) $accordion_params[] = 'multiple:true';
 if (!$collapsible && !$multiple) $accordion_params[] = 'collapsible:false';
-if (!$animation)
-{
+if (!$animation) {
     $accordion_params[] = 'animation:false';
 } else {
     if ($duration > 0 && (int)$duration != 200) $accordion_params[] = 'duration:' . $duration;
@@ -33,4 +33,6 @@ if (!$animation)
 }
 $accordion_params = $accordion_params ? '="' . implode(';', $accordion_params) . '"' : '';
 
-require(JModuleHelper::getLayoutPath('mod_uk_accordion', $params->get('layout', 'default')));
+if ($items) {
+    require(ModuleHelper::getLayoutPath('mod_uk_accordion', $params->get('layout', 'default')));
+}

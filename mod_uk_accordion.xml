@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<extension type="module" version="3.6" method="upgrade" client="site">
+<extension type="module" version="3.7" method="upgrade" client="site">
     <name>UIkit 3 Accordion</name>
-	<author>Aleksey A. Morozov (AlekVolsk)</author>
-	<copyright>(C) 2018 Aleksey A. Morozov. All rights reserved.</copyright>
-	<license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
-	<version>1.1.0</version>
-	<creationDate>May 2018</creationDate>
+    <author>Aleksey A. Morozov (AlekVolsk)</author>
+    <copyright>(C) 2019 Aleksey A. Morozov. All rights reserved.</copyright>
+    <license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
+    <version>1.2.0</version>
+    <creationDate>February 2019</creationDate>
     <description><![CDATA[MOD_UK_ACCORDION_XML_DESCRIPTION]]></description>
     <files>
         <filename module="mod_uk_accordion">mod_uk_accordion.php</filename>
@@ -20,7 +20,7 @@
     </languages>
     <config>
         <fields name="params">
-            
+
             <fieldset name="basic">
                 <field name="accordeon_class" type="text" label="MOD_UK_ACCORDION_CLASS" class="input-xlarge" />
                 <field name="title_class" type="text" label="MOD_UK_ACCORDION_TITLE_CLASS" class="input-xlarge" />
@@ -49,11 +49,11 @@
                     <option value="step-end">step-end</option>
                 </field>
             </fieldset>
-            
+
             <fieldset name="els">
                 <field name="items" type="subform" label="COM_MODULES_ELS_FIELDSET_LABEL" formsource="/modules/mod_uk_accordion/forms/form.xml" multiple="true" min="0" layout="joomla.form.field.subform.repeatable" />
             </fieldset>
-            
+
             <fieldset name="advanced">
                 <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
                 <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">
