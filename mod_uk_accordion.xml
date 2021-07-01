@@ -9,6 +9,7 @@
     <description><![CDATA[MOD_UK_ACCORDION_XML_DESCRIPTION]]></description>
     <files>
         <filename module="mod_uk_accordion">mod_uk_accordion.php</filename>
+		<folder>assets</folder>
         <folder>forms</folder>
         <folder>tmpl</folder>
     </files>
