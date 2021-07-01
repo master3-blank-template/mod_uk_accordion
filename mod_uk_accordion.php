@@ -1,10 +1,11 @@
 <?php defined('_JEXEC') or die;
 /*
  * @package     mod_uk_accordion
- * @copyright   Copyright (C) 2019 Aleksey A. Morozov (AlekVolsk). All rights reserved.
+ * @copyright   Copyright (C) Aleksey A. Morozov (AlekVolsk). All rights reserved.
  * @license     GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 
 $vars = [
@@ -34,5 +35,6 @@ if (!$animation) {
 $accordion_params = $accordion_params ? '="' . implode(';', $accordion_params) . '"' : '';
 
 if ($items) {
+    Factory::getDocument()->addScript('/modules/mod_uk_accordion/assets/modukaccordion.js');
     require(ModuleHelper::getLayoutPath('mod_uk_accordion', $params->get('layout', 'default')));
 }
